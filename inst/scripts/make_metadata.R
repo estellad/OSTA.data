@@ -57,7 +57,7 @@ oli_xem <- data.frame(base,
 
 ## Janesick
 jan_chm <- data.frame(base,
-    SourceUrl="https://cf.10xgenomics.com/samples/cell-exp/7.0.1/Chromium_FFPE_Human_Breast_Cancer_Ch[…]an_Breast_Cancer_count_sample_filtered_feature_bc_matrix.h5",
+    SourceUrl="https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast",
     Species="Homo sapiens",
     DataProvider="10x Genomics",
     Tags="Janesick:Chromium",
