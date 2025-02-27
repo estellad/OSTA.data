@@ -22,7 +22,8 @@ OSTA.data_read(
   bfc = BiocFileCache(),
   url = "https://osf.io/5n4q3",
   pol = TRUE,
-  mol = TRUE
+  mol = TRUE,
+  bin = c("008", "016")
 )
 }
 \arguments{
@@ -37,6 +38,9 @@ instance giving the location of files stored on disk}
 
 \item{pol, mol}{logical scalar; specifies whether or not 
 to retrieve boundaries and molecules, respectively}
+
+\item{bin}{character string; the bin size to load
+(ignored unless reading in a Visium HD dataset)}
 }
 \value{
 \itemize{
@@ -44,8 +48,11 @@ to retrieve boundaries and molecules, respectively}
   returns a character vector of 
   currently available datasets}
 \item{\code{OSTA.data_load} 
-  return a character string;
-  the path to a Zip archive}}
+  returns a character string;
+  the path to a Zip archive},
+\item{\code{OSTA.data_read}
+  returns an object of class
+  \code{SpatialExperiment}}}
 }
 \description{
 Datasets used in OSTA
@@ -84,6 +91,9 @@ list.files(td)
 # read into 'SpatialExperiment'
 library(SpatialExperimentIO)
 (spe <- readXeniumSXE(td))
+
+# load & read directly
+(spe <- OSTA.data_read(id))
 }
 \references{
 Oliveira \emph{et al.} 

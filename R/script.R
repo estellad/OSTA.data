@@ -1,6 +1,9 @@
 #' @name OSTA.data
 #' @title Datasets used in OSTA
-#' @aliases OSTA.data_list OSTA.data_load
+#' @aliases 
+#'   OSTA.data_list 
+#'   OSTA.data_load 
+#'   OSTA.data_read
 #' 
 #' @param id character string; dataset identifier
 #'   (see \code{\link{OSTA.data_list}} for valid options)
@@ -148,6 +151,7 @@ OSTA.data_read <- \(id,
         stop("missing dependency; install using",
             " BiocManager::install('", x, "')")
 }
+#' @importFrom utils read.csv
 .chr <- \(x) {
     .dep("DropletUtils")
     .dep("SummarizedExperiment")
@@ -166,6 +170,7 @@ OSTA.data_read <- \(id,
     }
     sce
 }
+#' @importFrom utils read.csv
 .cos <- \(x) {
     .dep("SpatialExperimentIO")
     fun <- SpatialExperimentIO::readCosmxSXE
@@ -189,6 +194,7 @@ OSTA.data_read <- \(id,
     if (typ == "VisiumHD") arg$bin <- bin
     VisiumIO::import(do.call(fun, arg))
 }
+#' @importFrom utils read.csv
 .xen <- \(x) {
     .dep("XeniumIO")
     spe <- XeniumIO::import(XeniumIO::TENxXenium(xeniumOut=x, format="h5"))
