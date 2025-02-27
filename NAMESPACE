@@ -2,10 +2,13 @@
 
 export(OSTA.data_list)
 export(OSTA.data_load)
+export(OSTA.data_read)
 importFrom(BiocFileCache,BiocFileCache)
 importFrom(BiocFileCache,bfcadd)
 importFrom(BiocFileCache,bfcquery)
 importFrom(osfr,osf_download)
 importFrom(osfr,osf_ls_files)
 importFrom(osfr,osf_retrieve_node)
+importFrom(utils,getFromNamespace)
+importFrom(utils,unzip)
 importFrom(utils,zip)

@@ -1,7 +1,7 @@
 Package: OSTA.data
 Title: OSTA book data
 Depends: R (>= 4.5)
-Version: 0.99.2
+Version: 0.99.3
 Description: 
   'OSTA.data' is a companion package for the "Orchestrating Spatial 
   Transcriptomics Analysis" (OSTA) with Bioconductor online book.
@@ -36,7 +36,10 @@ Suggests:
     DropletUtils,
     knitr,
     VisiumIO,
-    SpatialExperimentIO
+    SingleCellExperiment,
+    SpatialExperimentIO,
+    XeniumIO,
+    testthat (>= 3.0.0)
 biocViews: 
     DataImport, 
     DataRepresentation, 
@@ -53,3 +56,4 @@ License: Artistic-2.0
 VignetteBuilder: knitr
 URL: https://github.com/estellad/OSTA.data
 BugReports: https://github.com/estellad/OSTA.data
+Config/testthat/edition: 3
