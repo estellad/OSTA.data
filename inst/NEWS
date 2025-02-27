@@ -1,3 +1,7 @@
+changes in version 0.99.3 (2025-02-27)
+
+- add OSTA.data_read() to load'n'read
+
 changes in version 0.99.2 (2025-02-25)
 
 - update url
