@@ -36,7 +36,7 @@ Suggests:
     DropletUtils,
     knitr,
     VisiumIO,
-    SingleCellExperiment,
+    SummarizedExperiment,
     SpatialExperimentIO,
     XeniumIO,
     testthat (>= 3.0.0)
