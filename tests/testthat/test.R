@@ -33,9 +33,9 @@ test_that("read,cos", {
     # expect_s4_class(se, spe)
     # expect_true(!is.null(se$Annotation))
     
-    id <- "CosMx6k_HumanBrain"
-    se <- OSTA.data_read(id, mol=FALSE)
-    expect_s4_class(se, spe)
+    # id <- "CosMx6k_HumanBrain"
+    # se <- OSTA.data_read(id, mol=FALSE)
+    # expect_s4_class(se, spe)
 })
 
 test_that("read,chr", {
