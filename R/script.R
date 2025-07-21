@@ -31,12 +31,12 @@
 #' Oliveira \emph{et al.} 
 #' Characterization of immune cell populations in the tumor 
 #' microenvironment of colorectal cancer using high definition 
-#' spatial profiling. \emph{bioRxiv} 2024.06.04.597233 (2024).
+#' spatial profiling. \emph{Nature Genetics} 57, 1512–1523 (2025).
 #' 
 #' Janesick \emph{et al.} 
 #' High resolution mapping of the tumor microenvironment 
 #' using integrated single-cell, spatial and in situ analysis.
-#' \emph{Nature Communications} 14:8353 (2023).
+#' \emph{Nature Communications} 14, 8353 (2023).
 #' 
 #' @returns\itemize{
 #' \item{\code{OSTA.data_list} 
