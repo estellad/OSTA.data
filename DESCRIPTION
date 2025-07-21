@@ -1,7 +1,7 @@
 Package: OSTA.data
 Title: OSTA book data
 Depends: R (>= 4.5)
-Version: 0.99.3
+Version: 1.1.1
 Description: 
   'OSTA.data' is a companion package for the "Orchestrating Spatial 
   Transcriptomics Analysis" (OSTA) with Bioconductor online book.
