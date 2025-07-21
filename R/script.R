@@ -13,12 +13,12 @@
 #' 
 #' @details The following datasets are currently available:\itemize{
 #' \item{Janesick \emph{et al.}:
-#'   Visium, Visium HD, Xenium and Chromium
+#'   Visium, Xenium and Chromium
 #'   data on human colorectal cancer;
 #'   source: \href{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243280}{GSE243280}
 #'   source chromium h5: \href{https://www.10xgenomics.com/products/xenium-in-situ/preview-dataset-human-breast}{10x Genomics}}
 #' \item{Oliveira \emph{et al.}:
-#'   Visium, Xenium and Chromium
+#'   Visium, Visium HD, Xenium and Chromium
 #'   data on human breast cancer;
 #'   source: \href{https://www.10xgenomics.com/products/visium-hd-spatial-gene-expression/dataset-human-crc}{10x Genomics}}
 #' \item{1k-plex CosMx data on 2 mouse brain sections
