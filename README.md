@@ -1,10 +1,20 @@
-# Bioc spatial book data
+# Introduction
+
+<img src="inst/extdata/OSTA.data.png" width="200" align="right"/>
+
+`OSTA.data` is a data retrieval package for all data used in the OSTA book. It conveniently loads raw data from Open Science Framework (OSF) to cache or local download. 
+
+# Installation
 
 ```r
 if (!require("BiocManager", quietly=TRUE))
     install.packages("BiocManager")
 BiocManager::install("estellad/OSTA.data")
 ```
+
+# Usage
+
+The following data are available to download in `library(OSTA.data)`
 
 ```r
 OSTA.data_list()
@@ -20,13 +30,17 @@ OSTA.data_list()
 # [10] "Xenium_HumanColon_Oliveira"
 ```
 
+Each data set can be retrieved and unzipped. List necessary raw data files available with `list.files(td)`.
+
 ```r
-# retrieval
 pa <- OSTA.data_load("Xenium_HumanColon_Oliveira")
 # unpacking
 dir.create(td <- tempfile())
 unzip(pa, exdir=td)
-# importing
+```
+After download, import data as a `SpatialExperiment` object with [`library(SpatialExperimentIO)`](https://github.com/estellad/SpatialExperimentIO).
+
+```r
 library(SpatialExperimentIO)
 (spe <- readXeniumSXE(td))
 # class: SpatialExperiment 
