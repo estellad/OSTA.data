@@ -125,6 +125,7 @@ obj <- TENxVisium(
 
 ## VisiumHD
 
+Bin-level data object construction:
 ```{r vhd}
 # retrieval
 id <- "VisiumHD_HumanColon_Oliveira"
@@ -135,8 +136,24 @@ unzip(pa, exdir=td)
 obj <- TENxVisiumHD(
     spacerangerOut=td, 
     images="lowres", 
+    bin_size = "008",
     format="h5")
 (spe <- import(obj))
+```
+Cell-level data object construction:
+```{r vhdcell, warning=FALSE}
+# retrieval 
+id <- "VisiumHD_HumanColon_Oliveira"
+pa <- OSTA.data_load(id)
+dir.create(td <- tempfile())
+unzip(pa, exdir=td)
+vhdcell <- TENxVisiumHD(
+    format = "h5",
+    segmented_outputs = file.path(td,"segmented_outputs"),
+    images = "hires")|>
+    import()
+rownames(vhdcell) <- make.unique(rowData(vhdcell)$Symbol)
+vhdcell
 ```
 
 ## Chromium
