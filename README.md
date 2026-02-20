@@ -2,21 +2,21 @@
 
 <img src="inst/extdata/OSTA.data.png" width="200" align="right"/>
 
-`OSTA.data` is a data retrieval package for all data used in the OSTA book. It conveniently loads raw data from Open Science Framework (OSF) to cache or local download. 
+`OSTA.data` is a data retrieval package for all data used in the OSTA book. It conveniently loads raw data from Open Science Framework (OSF) to cache or local download.
 
 # Installation
 
-```r
+``` r
 if (!require("BiocManager", quietly=TRUE))
     install.packages("BiocManager")
-BiocManager::install("estellad/OSTA.data")
+BiocManager::install("OSTA.data")
 ```
 
 # Usage
 
 The following data are available to download in `library(OSTA.data)`
 
-```r
+``` r
 OSTA.data_list()
 #  [1] "Chromium_HumanBreast_Janesick"
 #  [2] "Chromium_HumanColon_Oliveira" 
@@ -32,15 +32,16 @@ OSTA.data_list()
 
 Each data set can be retrieved and unzipped. List necessary raw data files available with `list.files(td)`.
 
-```r
+``` r
 pa <- OSTA.data_load("Xenium_HumanColon_Oliveira")
 # unpacking
 dir.create(td <- tempfile())
 unzip(pa, exdir=td)
 ```
+
 After download, import data as a `SpatialExperiment` object with [`library(SpatialExperimentIO)`](https://github.com/estellad/SpatialExperimentIO).
 
-```r
+``` r
 library(SpatialExperimentIO)
 (spe <- readXeniumSXE(td))
 # class: SpatialExperiment 
@@ -57,3 +58,13 @@ library(SpatialExperimentIO)
 # spatialCoords names(2) : x_centroid y_centroid
 # imgData names(0):
 ```
+
+## Citation
+
+------------------------------------------------------------------------
+
+HL Crowell\*°, Y Dong\*, I Billato, P Cai, M Emons, S Gunz, B Guo, M Li, A Mahmoud, A Manukyan, H Pagès, P Panwar, S Rao, CJ Sargeant, L Shepherd Kern, M Ramos, J Sun, M Totty, VJ Carey, Y Chen, L Collado-Torres, S Ghazanfar, KD Hansen, K Martinowich, KR Maynard, E Patrick, D Righelli, D Risso, S Tiberi, L Waldron, R Gottardo†°, MD Robinson†°, SC Hicks†°, LM Weber†°. Orchestrating spatial transcriptomics analysis with Bioconductor. *bioRxiv* (2025). [doi:10.1101/2025.11.20.688607](http://doi.org/10.1101/2025.11.20.688607)
+
+(\* co-first. † co-senior. ° correspondence.)
+
+------------------------------------------------------------------------
