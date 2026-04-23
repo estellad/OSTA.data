@@ -36,6 +36,7 @@ Suggests:
     DropletUtils,
     knitr,
     VisiumIO,
+    sf,
     SpatialExperimentIO
 biocViews: 
     DataImport, 
